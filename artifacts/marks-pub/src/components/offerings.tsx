@@ -1,34 +1,41 @@
 import { motion } from "framer-motion"
-import { Beer, Flame, Music, MonitorPlay } from "lucide-react"
+import { Beer, Flame, Music, MonitorPlay, Car } from "lucide-react"
 
 const offerings = [
   {
     title: "Cold Drinks & Cocktails",
-    description: "A fully stocked bar featuring premium spirits, local & international beers, and signature cocktails to keep the vibe going.",
+    description: "A fully stocked bar featuring premium spirits, local beers including Windhoek on tap, ice-cold ciders, and signature cocktails.",
     icon: Beer,
     color: "from-amber-500/20 to-orange-600/5",
     iconColor: "text-amber-500"
   },
   {
     title: "Authentic Shisanyama",
-    description: "Premium cuts of meat expertly grilled over open flames. The true taste of a South African braai, served hot and fresh.",
+    description: "Premium cuts grilled over open flames — boerewors, chicken, lamb, beef and more. The real taste of South African braai culture.",
     icon: Flame,
     color: "from-red-500/20 to-orange-600/5",
     iconColor: "text-red-500"
   },
   {
     title: "Live Entertainment",
-    description: "From local DJs spinning the latest tracks to live bands, our entertainment lineup ensures there's never a dull moment.",
+    description: "Soul, R&B and Amapiano from local and celebrity DJs. When you're at Ko Papi, the party never stops.",
     icon: Music,
     color: "from-purple-500/20 to-pink-600/5",
     iconColor: "text-purple-500"
   },
   {
-    title: "Live Sports Screenings",
+    title: "Sports Screenings",
     description: "Catch every major match on our big screens. Surrounded by passionate fans, it's the next best thing to being in the stadium.",
     icon: MonitorPlay,
     color: "from-blue-500/20 to-cyan-600/5",
     iconColor: "text-blue-500"
+  },
+  {
+    title: "Car Wash",
+    description: "Get your car looking fresh while you enjoy your meal and drinks. A full car wash service right on site.",
+    icon: Car,
+    color: "from-green-500/20 to-teal-600/5",
+    iconColor: "text-green-500"
   }
 ]
 
@@ -54,7 +61,7 @@ export function Offerings() {
             What We <span className="text-primary">Offer</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Everything you need for an unforgettable experience under one roof.
+            Everything you need for an unforgettable experience — all under one roof in Hebron.
           </p>
         </div>
 
@@ -63,7 +70,7 @@ export function Offerings() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
         >
           {offerings.map((offering, i) => (
             <motion.div 
@@ -78,8 +85,8 @@ export function Offerings() {
                   <offering.icon className={`w-7 h-7 ${offering.iconColor}`} />
                 </div>
                 
-                <h3 className="font-display text-2xl text-foreground mb-3">{offering.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <h3 className="font-display text-xl text-foreground mb-3">{offering.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
                   {offering.description}
                 </p>
               </div>

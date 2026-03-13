@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { MapPin, Phone, Clock, Facebook, Instagram } from "lucide-react"
+import { MapPin, Phone, Clock, Facebook, Instagram, CreditCard, Car, Accessibility, ShoppingBag, CalendarCheck } from "lucide-react"
 import { Button } from "./ui/button"
 
 export function Contact() {
@@ -19,7 +19,7 @@ export function Contact() {
               Find <span className="text-primary">Us</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-10">
-              Ready for a great time? Come down to Mark's Pub & Shisanyama in Hebron. We're ready to serve you.
+              Come down to Mark's Pub & Shisanyama in Hebron. We're open daily and ready to serve you the best time of your life.
             </p>
 
             <div className="space-y-8">
@@ -29,7 +29,8 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-display text-2xl text-foreground mb-1">Location</h4>
-                  <p className="text-muted-foreground">Pretoria Hebron</p>
+                  <p className="text-muted-foreground">M20 Hebron Road</p>
+                  <p className="text-muted-foreground">Pretoria, Gauteng 0193</p>
                   <p className="text-muted-foreground">South Africa</p>
                 </div>
               </div>
@@ -40,20 +41,50 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-display text-2xl text-foreground mb-1">Trading Hours</h4>
-                  <p className="text-muted-foreground">Monday - Thursday: 12:00 PM - 10:00 PM</p>
-                  <p className="text-muted-foreground">Friday - Sunday: 11:00 AM - Late</p>
+                  <p className="text-muted-foreground">Open Daily: <span className="text-foreground font-medium">10:00 AM – 2:00 AM</span></p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center shrink-0">
+                  <Phone className="text-primary w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-display text-2xl text-foreground mb-1">Call Us</h4>
+                  <a 
+                    href="tel:+27723867314" 
+                    className="text-primary hover:text-primary/80 transition-colors font-medium text-lg"
+                  >
+                    +27 72 386 7314
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div className="mt-12 pt-12 border-t border-border">
-              <h4 className="font-display text-2xl text-foreground mb-6">Follow Our Socials</h4>
-              <div className="flex gap-4">
+            {/* Features */}
+            <div className="mt-8 flex flex-wrap gap-3">
+              {[
+                { icon: CreditCard, label: "Cards Accepted" },
+                { icon: Car, label: "Car Wash" },
+                { icon: ShoppingBag, label: "Takeaways" },
+                { icon: CalendarCheck, label: "Bookings" },
+                { icon: Accessibility, label: "Wheelchair Friendly" },
+              ].map(({ icon: Icon, label }) => (
+                <span key={label} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-card border border-border text-muted-foreground text-sm">
+                  <Icon className="w-4 h-4 text-primary" />
+                  {label}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-10 pt-8 border-t border-border">
+              <h4 className="font-display text-2xl text-foreground mb-5">Follow Our Socials</h4>
+              <div className="flex flex-wrap gap-3">
                 <Button 
                   variant="outline" 
                   size="lg" 
                   className="gap-2"
-                  onClick={() => window.open('https://www.facebook.com/search/top?q=Mark%27s%20Pub%20%26%20Shisanyama', '_blank')}
+                  onClick={() => window.open('https://www.facebook.com/p/Marks-Pub-Shisanyama-100084372888921/', '_blank')}
                 >
                   <Facebook size={20} />
                   Facebook
@@ -65,7 +96,7 @@ export function Contact() {
                   onClick={() => window.open('https://www.instagram.com/markspub_and_shisanyama', '_blank')}
                 >
                   <Instagram size={20} />
-                  Instagram
+                  @markspub_and_shisanyama
                 </Button>
                 <Button 
                   variant="outline" 
@@ -73,14 +104,14 @@ export function Contact() {
                   className="gap-2"
                   onClick={() => window.open('https://www.tiktok.com/@markspubandshisanyama', '_blank')}
                 >
-                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="css-i6dzq1"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
-                  TikTok
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+                  @markspubandshisanyama
                 </Button>
               </div>
             </div>
           </motion.div>
 
-          {/* Map/Placeholder Side */}
+          {/* Map Side */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -88,21 +119,21 @@ export function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="h-full min-h-[400px] rounded-2xl border border-border bg-card overflow-hidden relative"
           >
-            {/* Abstract map placeholder */}
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cartographer.png')] opacity-10" />
             <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10 bg-background/50 backdrop-blur-sm">
               <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mb-6 animate-pulse">
                 <MapPin className="text-primary w-10 h-10" />
               </div>
               <h3 className="font-display text-3xl text-foreground mb-2">Pretoria Hebron</h3>
-              <p className="text-muted-foreground max-w-sm mb-6">
-                Search for "Mark's Pub & Shisanyama" on Google Maps to navigate directly to our door.
+              <p className="text-muted-foreground font-medium mb-1">M20 Hebron Road, Gauteng 0193</p>
+              <p className="text-muted-foreground text-sm max-w-sm mb-8">
+                Open daily from 10 AM to 2 AM. Tap below to get directions straight to our door.
               </p>
               <Button 
-                onClick={() => window.open('https://www.google.com/maps/search/Mark%27s+Pub+%26+Shisanyama+Pretoria+Hebron', '_blank')}
+                onClick={() => window.open('https://www.google.com/maps/search/Mark%27s+Pub+%26+Shisanyama+M20+Hebron+Road+Pretoria+0193', '_blank')}
                 className="font-display text-xl px-8"
               >
-                Open in Maps
+                Open in Google Maps
               </Button>
             </div>
           </motion.div>

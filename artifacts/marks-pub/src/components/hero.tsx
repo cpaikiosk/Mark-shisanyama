@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Button } from "./ui/button"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Trophy, Star } from "lucide-react"
 
 export function Hero() {
   const scrollTo = (id: string) => {
@@ -26,8 +26,19 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl mx-auto"
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-primary/20 border border-primary/30 text-primary text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm">
-            Pretoria Hebron
+          {/* Award winner badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="inline-flex items-center gap-2 mb-4 py-1.5 px-4 rounded-full bg-primary/20 border border-primary/40 text-primary text-sm font-semibold tracking-wide backdrop-blur-sm"
+          >
+            <Trophy size={14} />
+            Windhoek Real Beer, Real Food — R200,000 Grand Prize Winners 2026
+          </motion.div>
+
+          <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-white/80 text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm">
+            Pretoria Hebron · Ko Papi
           </span>
           
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-display text-white text-shadow-lg leading-none mb-6">
@@ -37,10 +48,21 @@ export function Hero() {
             </span>
           </h1>
           
-          <p className="text-lg md:text-2xl text-white/80 max-w-2xl mx-auto mb-10 font-light text-shadow-md">
-            Experience the ultimate local spot in Pretoria Hebron. 
-            Cold drinks, authentic shisanyama, and memories waiting to be made.
+          <p className="text-lg md:text-2xl text-white/80 max-w-2xl mx-auto mb-4 font-light text-shadow-md">
+            Authentic shisanyama, ice-cold drinks, live entertainment & great community vibes. 
+            Open daily from 10 AM to 2 AM on M20 Hebron Road, Pretoria.
           </p>
+
+          {/* Rating */}
+          <div className="flex items-center justify-center gap-2 mb-10">
+            <div className="flex">
+              {[...Array(4)].map((_, i) => (
+                <Star key={i} size={16} className="text-primary fill-primary" />
+              ))}
+              <Star size={16} className="text-primary fill-primary opacity-30" />
+            </div>
+            <span className="text-white/70 text-sm">4.3 on Google · 569+ reviews · #10 of 900 pubs in Pretoria</span>
+          </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button 
