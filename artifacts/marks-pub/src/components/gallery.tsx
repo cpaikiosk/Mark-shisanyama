@@ -40,7 +40,12 @@ const galleryItems = [
   },
   {
     src: "gallery-award.jpg",
-    title: "Windhoek Award Winners 2026",
+    title: "Windhoek Award Night 2026",
+    size: "col-span-1 row-span-1",
+  },
+  {
+    src: "gallery-event.jpg",
+    title: "R200,000 Grand Prize Winners",
     size: "md:col-span-2 row-span-1",
   },
 ]

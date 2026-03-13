@@ -20,6 +20,7 @@ export function Navbar() {
     { name: "What We Offer", href: "#offerings" },
     { name: "Menu", href: "#menu" },
     { name: "Gallery", href: "#gallery" },
+    { name: "Videos", href: "#videos" },
     { name: "Find Us", href: "#contact" },
   ]
 

@@ -4,6 +4,7 @@ import { About } from "@/components/about"
 import { Offerings } from "@/components/offerings"
 import { Menu } from "@/components/menu"
 import { Gallery } from "@/components/gallery"
+import { Videos } from "@/components/videos"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Offerings />
         <Menu />
         <Gallery />
+        <Videos />
         <Contact />
       </main>
       <Footer />
