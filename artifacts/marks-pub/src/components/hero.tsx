@@ -94,18 +94,19 @@ export function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="w-full max-w-5xl mx-auto"
+            className="w-full max-w-sm mx-auto"
           >
             <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10"
-              style={{ paddingBottom: "56.25%" }}
+              style={{ paddingBottom: "177.78%" }}
             >
               <iframe
-                src="https://www.tiktok.com/embed/v2/7302155816629456133?autoplay=1&muted=1"
+                src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2131440604336528&show_text=false&autoplay=true&muted=false"
                 className="absolute inset-0 w-full h-full"
-                allow="autoplay; encrypted-media"
+                style={{ border: "none", overflow: "hidden" }}
+                scrolling="no"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen
-                title="Mark's Pub & Shisanyama — SAMA28 Celebration"
-                style={{ border: "none" }}
+                title="Mark's Pub & Shisanyama Reel"
               />
             </div>
             <p className="text-white/50 text-sm mt-3 text-center">
