@@ -94,19 +94,17 @@ export function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="w-full max-w-sm mx-auto"
+            className="w-full max-w-xs mx-auto"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10">
-              <iframe
-                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2131440604336528%2F&show_text=false&width=560&t=0"
-                width="560"
-                height="314"
-                style={{ border: "none", overflow: "hidden", width: "100%", height: "auto", aspectRatio: "560/314" }}
-                scrolling="no"
-                frameBorder="0"
-                allowFullScreen
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                title="Mark's Pub & Shisanyama Reel"
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10" style={{ aspectRatio: "9/16" }}>
+              <video
+                src={`${import.meta.env.BASE_URL}images/hero-reel.mp4`}
+                className="absolute inset-0 w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls
               />
             </div>
             <p className="text-white/50 text-sm mt-3 text-center">
