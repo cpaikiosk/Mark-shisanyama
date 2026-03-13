@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Trophy, Users, Heart } from "lucide-react"
+import { Users, Heart } from "lucide-react"
 
 export function About() {
   return (
@@ -7,34 +7,12 @@ export function About() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
       
       <div className="container px-4 md:px-6 mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl blur-xl" />
-            <img 
-              src={`${import.meta.env.BASE_URL}images/about-pub.png`}
-              alt="Inside Mark's Pub" 
-              className="relative rounded-2xl object-cover w-full h-auto shadow-2xl border border-white/5"
-            />
-            
-            {/* Award badge */}
-            <div className="absolute -bottom-6 -right-6 bg-card border border-primary/40 p-5 rounded-2xl shadow-xl backdrop-blur-md max-w-[180px]">
-              <Trophy className="text-primary w-7 h-7 mb-1" />
-              <p className="font-display text-sm text-primary leading-tight">Windhoek Real Beer, Real Food</p>
-              <p className="text-xs text-muted-foreground mt-1">R200,000 Grand Prize Winner 2026</p>
-            </div>
-          </motion.div>
-          
+        <div className="grid grid-cols-1 gap-16 items-center max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6 }}
           >
             <h2 className="font-display text-4xl md:text-6xl text-foreground mb-6">
               The Heartbeat of <span className="text-primary">Hebron</span>
