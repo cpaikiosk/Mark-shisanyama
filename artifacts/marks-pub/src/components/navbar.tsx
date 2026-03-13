@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
-import { Button } from "./ui/button"
 import { cn } from "@/lib/utils"
 
 export function Navbar() {
@@ -71,12 +70,6 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
-          <Button 
-            onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="font-display tracking-wide text-lg"
-          >
-            Visit Us
-          </Button>
         </nav>
 
         {/* Mobile Toggle */}
