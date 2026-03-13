@@ -46,11 +46,13 @@ export function Navbar() {
         <a 
           href="#hero" 
           onClick={(e) => scrollToSection(e, "#hero")}
-          className="flex items-center gap-2 group"
+          className="flex items-center gap-3 group"
         >
-          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-display text-2xl group-hover:rotate-12 transition-transform duration-300 shadow-lg shadow-primary/30">
-            M
-          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}images/logo.jpg`}
+            alt="Mark's Pub & Shisanyama Logo"
+            className="w-12 h-12 rounded-full object-cover group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/30 border-2 border-primary/40"
+          />
           <span className="font-display text-2xl tracking-wide text-foreground">
             Mark's Pub <span className="text-primary">&</span> Shisanyama
           </span>

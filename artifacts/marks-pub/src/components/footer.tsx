@@ -12,10 +12,12 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-12">
           
           <div className="text-center md:text-left">
-            <a href="#hero" onClick={scrollToTop} className="inline-flex items-center gap-2 group mb-4">
-              <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-display text-xl">
-                M
-              </div>
+            <a href="#hero" onClick={scrollToTop} className="inline-flex items-center gap-3 group mb-4">
+              <img
+                src={`${import.meta.env.BASE_URL}images/logo.jpg`}
+                alt="Mark's Pub & Shisanyama Logo"
+                className="w-14 h-14 rounded-full object-cover border-2 border-primary/40 group-hover:scale-105 transition-transform duration-300"
+              />
               <span className="font-display text-2xl tracking-wide text-foreground">
                 Mark's Pub <span className="text-primary">&</span> Shisanyama
               </span>
