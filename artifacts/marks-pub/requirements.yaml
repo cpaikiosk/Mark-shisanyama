@@ -1,0 +1,12 @@
+packages:
+  "framer-motion": "For smooth scroll animations and page transitions"
+  "clsx": "For conditional class name merging"
+  "tailwind-merge": "For merging tailwind classes efficiently"
+
+images:
+  - path: "artifacts/marks-pub/public/images/hero-bg.png"
+    description: "Rich dark moody pub and shisanyama background with glowing amber embers over a braai grill, glowing lights, beautiful bokeh effect, warm south african atmosphere"
+    aspect_ratio: "16:9"
+  - path: "artifacts/marks-pub/public/images/about-pub.png"
+    description: "Cozy modern pub interior with rustic wood, warm amber lighting, lively but empty atmosphere, south african decor elements"
+    aspect_ratio: "4:3"

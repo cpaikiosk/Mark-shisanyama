@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Mark's Pub & Shisanyama"
+version = "1.0.0"
+id = "artifacts/marks-pub"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 23797
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/marks-pub run dev"
+
+[services.env]
+PORT = "23797"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/marks-pub", "run", "build"]
+publicDir = "artifacts/marks-pub/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
