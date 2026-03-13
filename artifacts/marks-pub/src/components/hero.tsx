@@ -29,20 +29,6 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl mx-auto"
         >
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="flex justify-center mb-6"
-          >
-            <img
-              src={`${import.meta.env.BASE_URL}images/logo.jpg`}
-              alt="Mark's Pub & Shisanyama Logo"
-              className="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover shadow-2xl border-4 border-primary/50"
-            />
-          </motion.div>
-
           {/* Award winner badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
