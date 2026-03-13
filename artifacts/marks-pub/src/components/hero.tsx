@@ -54,10 +54,6 @@ export function Hero() {
             Windhoek Real Beer, Real Food — R200,000 Grand Prize Winners 2026
           </motion.div>
 
-          <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-white/80 text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm">
-            Pretoria Hebron · Ko Papi
-          </span>
-
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-display text-white text-shadow-lg leading-none mb-6">
             Where Good Vibes <br/>
             <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
