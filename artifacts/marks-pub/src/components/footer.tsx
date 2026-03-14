@@ -57,9 +57,13 @@ export function Footer() {
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Mark's Pub & Shisanyama. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+          <div className="flex items-center gap-2">
+            <span className="text-muted-foreground/70 text-xs">Website by</span>
+            <img
+              src={`${import.meta.env.BASE_URL}images/bole-technologies-logo.png`}
+              alt="Bole Technologies"
+              className="h-5 object-contain opacity-70 hover:opacity-100 transition-opacity"
+            />
           </div>
         </div>
       </div>
