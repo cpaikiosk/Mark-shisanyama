@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Button } from "./ui/button"
-import { ChevronDown, Trophy, Star } from "lucide-react"
+import { Trophy, Star } from "lucide-react"
 
 export function Hero() {
   const scrollTo = (id: string) => {
@@ -97,15 +97,6 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-white/50 hover:text-primary transition-colors cursor-pointer"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-        onClick={() => scrollTo('#about')}
-      >
-        <ChevronDown size={36} />
-      </motion.div>
     </section>
   )
 }
