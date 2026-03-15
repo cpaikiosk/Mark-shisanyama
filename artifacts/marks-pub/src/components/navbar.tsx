@@ -85,7 +85,7 @@ export function Navbar() {
       {/* Mobile Nav */}
       <div
         className={cn(
-          "fixed inset-x-0 top-[100%] bg-background/95 backdrop-blur-xl border-b border-border transition-all duration-300 ease-in-out md:hidden flex flex-col shadow-2xl",
+          "absolute inset-x-0 top-[100%] bg-background/95 backdrop-blur-xl border-b border-border transition-all duration-300 ease-in-out md:hidden flex flex-col shadow-2xl",
           mobileMenuOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-4 invisible"
         )}
       >
